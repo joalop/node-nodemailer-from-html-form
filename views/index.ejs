@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <form action="/" method="post">
+      
+      <label for="write"></label>
+      <input type="text" name="email-write" id="write" placeholder="example@gmail.com">
+
+      <select name="email" id="">
+        <option value="0">...</option>
+        <option value="1"><%= emails.alca %></option>
+        <option value="2"><%= emails.joan %></option>
+      </select>
+
+      <label for="subject">Subject</label>
+      <input type="text" name="subject" id="subject">
+
+      <label for="content">EMAIL BODY "Text Plain"</label>
+      <textarea name="content" id="content" class="" cols="8" rows="4"></textarea>
+
+      <input type="submit" value="Send Email">
+    </form>
+  </body>
+</html>
