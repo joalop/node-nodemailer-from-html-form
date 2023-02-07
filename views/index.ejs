@@ -9,24 +9,49 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
-    <form action="/" method="post">
+    <form action="/" method="post" class="container flex-column justify-content-center align-items-center col-md-4 align-items-center">
       
-      <label for="write"></label>
-      <input type="text" name="email-write" id="write" placeholder="example@gmail.com">
+      <div class="container col-md-10">
 
-      <select name="email" id="">
-        <option value="0">...</option>
-        <option value="1"><%= emails.alca %></option>
-        <option value="2"><%= emails.joan %></option>
-      </select>
+        <div class="container col-md-10">
+          <div class="container col-md-7">
+            <label for="write">Email Receiver</label>
+          </div>
+          <input type="text" name="email-write" id="write" class="form-control" placeholder="example@gmail.com">
+        </div>
 
-      <label for="subject">Subject</label>
-      <input type="text" name="subject" id="subject">
+        <div class="container col-md-10">
+          <div class="container col-md-7">
+            <label for="write">Select Receiver</label>
+          </div>
+          <select name="email" id="" class="form-control" >
+            <option value="1"><%= emails.alca %></option>
+            <option value="2"><%= emails.joan %></option>
+          </select>
+        </div>
+      </div>
 
-      <label for="content">EMAIL BODY "Text Plain"</label>
-      <textarea name="content" id="content" class="" cols="8" rows="4"></textarea>
+      <div class="container col-md-4"></div>
+        <div class="container col-md-2">
+          <label for="subject">Subject</label>
+        </div>
 
-      <input type="submit" value="Send Email">
+        <div class="container col-md-10  ">
+          <input type="text" name="subject" id="subject" class="form-control" required>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="container col-md-7">
+          <label for="content">EMAIL BODY "Text Plain"</label>
+        </div>
+        
+        <textarea name="content" id="content" class="form-control" cols="8" rows="4" required></textarea>
+      </div>
+      <div class="container col-md-7">
+        <input type="submit" value="Send Email" class=" form-control mt-2 btn btn-primary  ">
+      </div>
+      
     </form>
   </body>
 </html>
