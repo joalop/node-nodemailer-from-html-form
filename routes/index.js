@@ -7,7 +7,17 @@ let joan = process.env.MY_EMAIL
 
 /* GET Home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', emails: {alca, joan} });
+
+  let cookie;
+  if(req.cookies.Darkmode){
+    console.log(req.cookies.Darkmode)
+    cookie = req.cookies.Darkmode
+
+    res.render('index', { title: 'Express', emails: {alca, joan}, cookie, });
+  }else{
+    res.render('index', { title: 'Express', emails: {alca, joan}, cookie, });
+  }
+ 
 });
 
 /* POST Home page*/
